@@ -16,13 +16,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background : url(https://cdn.hipwallpaper.com/i/93/54/GyZOrS.jpg);
+  &> img {
+    width: 50px;
+    margin: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 </style>
