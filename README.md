@@ -1,2 +1,3 @@
-A small demo of use of Vue.js
-By Dov Ber Ballon
+A small demo of use of Vue.js<br>
+By Dov Ber Ballon<br><br>
+https://dbballon.github.io/herolo-vue/
