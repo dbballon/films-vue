@@ -105,7 +105,7 @@ export default {
     const filmIds = ['tt7549996','tt1386697','tt1856101','tt6324278','tt2328900','tt5503686','tt6189022','tt6105098'];
     filmIds.map(
       (id, index) => {
-        axios.get('http://www.omdbapi.com/?i='+id+'&apikey=9be04176')
+        axios.get('https://www.omdbapi.com/?i='+id+'&apikey=9be04176')
           .then((response) => {
             const returnFilm = {
               id : index,
