@@ -112,12 +112,11 @@ export default {
       this.$emit('edit-cancel');
     },
     validateForm(){
-      const errorFields = {...this.errorFields};
+      const errorFields = this.errorFields;
       Object.keys(this.errorFields).map(
         (key)=>{
           errorFields[key]='';
         });
-      this.errorFields = {...errorFields};
       let valid = true;
       if (this.form.title==''){
         this.errorFields.title=this.errorMessages.empty;
@@ -164,11 +163,11 @@ export default {
     titleForm(value){
       if (value=='') return;
       value = value
+      .replace(/([^a-z0-9\s-:]+)/gi, '')
       .toLowerCase()
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
-      .replace(/([^a-z0-9\s-:]+)/gi, '')
       .trim();
       return value;
     }

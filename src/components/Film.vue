@@ -1,6 +1,6 @@
 <template>
   <div class="film">
-    <h4>{{filmInfo.title | titleFormat}}</h4>
+    <h4 class="font-weight-bold mb-1">{{filmInfo.title | titleFormat}}</h4>
     <p>
 	    Director: {{filmInfo.director}}</br>
 	    Genre: {{filmInfo.genre}}</br>
@@ -29,11 +29,12 @@ export default {
     titleFormat(value) {
     	if (value=='') return;
 		value = value
+		.replace(/([^a-z0-9\s-:]+)/gi, '')
 		.toLowerCase()
 		.split(' ')
 		.map(word => word.charAt(0).toUpperCase() + word.slice(1))
 		.join(' ')
-		.replace(/([^a-z0-9\s-:]+)/gi, '');
+		.trim();
       return value;
     }
   },
