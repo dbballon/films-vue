@@ -117,7 +117,7 @@ export default {
         (key)=>{
           errorFields[key]='';
         });
-      let valid = true;
+      let valid = true; 
       if (this.form.title==''){
         this.errorFields.title=this.errorMessages.empty;
         valid = false

@@ -1,6 +1,7 @@
 <template>
   <div class="films">
     <button @click="addFilm" class="btn btn-primary btn-lg mb-2 ml-2">Add Film</button>
+    <router-link to="/"><button class="btn btn-primary btn-lg mb-2 mr-2 float-right">Go Home</button></router-link>
     <div class="films-container">
       <Film 
         v-for="film in films" 
