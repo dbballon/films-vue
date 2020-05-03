@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "herolo-vue",
+  //publicPath: "herolo-vue",
   outputDir: "docs",
 };
